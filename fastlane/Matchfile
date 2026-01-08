@@ -1,0 +1,40 @@
+# Matchfile - Code Signing Configuration
+# For more information about match, see:
+# https://docs.fastlane.tools/actions/match/
+
+# Git repository URL to store certificates and profiles
+# Create a PRIVATE repository to store your certificates
+git_url(ENV["MATCH_GIT_URL"] || "git@github.com:YOUR_ORG/certificates.git")
+
+# Storage mode (git is recommended)
+storage_mode("git")
+
+# Type of provisioning profile (appstore, adhoc, development, enterprise)
+type("appstore")
+
+# App identifiers (main app + all extensions)
+app_identifier([
+  "com.luminote.screentime",
+  "com.luminote.screentime.ShieldAction",
+  "com.luminote.screentime.ShieldConfig",
+  "com.luminote.screentime.DeviceActivityReport",
+  "com.luminote.screentime.DeviceActivityMonitor"
+])
+
+# Apple Developer Portal Team ID
+team_id("9DF257V497")
+
+# Keychain name (for CI)
+keychain_name(ENV["MATCH_KEYCHAIN_NAME"] || "login.keychain")
+
+# Don't force device registration for App Store builds
+force_for_new_devices(false)
+
+# Clone using shallow clone for faster CI
+shallow_clone(true)
+
+# Skip confirmation prompts
+skip_confirmation(true)
+
+# Read-only mode in CI (won't create new certs/profiles)
+readonly(ENV['CI'] == 'true')

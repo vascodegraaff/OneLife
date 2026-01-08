@@ -1,0 +1,34 @@
+# App Store Connect Configuration
+# For more information about the Appfile, see:
+# https://docs.fastlane.tools/advanced/#appfile
+
+# App Store Connect / Apple Developer Portal credentials
+# These can also be set via environment variables
+
+app_identifier("com.luminote.screentime")  # The bundle identifier of your app
+team_id("9DF257V497")                       # Developer Portal Team ID
+
+# App Store Connect
+# You can use App Store Connect API Key (recommended for CI)
+# or Apple ID authentication
+
+# For App Store Connect API Key authentication (recommended):
+# Set these environment variables in your CI:
+# - APP_STORE_CONNECT_API_KEY_ID
+# - APP_STORE_CONNECT_API_ISSUER_ID
+# - APP_STORE_CONNECT_API_KEY_CONTENT (base64 encoded)
+
+# For Apple ID authentication (not recommended for CI):
+# apple_id("your@email.com")
+# itc_team_id("YOUR_ITC_TEAM_ID")  # App Store Connect Team ID
+
+# For different configurations per lane:
+for_platform :ios do
+  for_lane :beta do
+    app_identifier("com.luminote.screentime")
+  end
+
+  for_lane :release do
+    app_identifier("com.luminote.screentime")
+  end
+end

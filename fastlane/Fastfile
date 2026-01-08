@@ -1,0 +1,193 @@
+# Fastfile for ScreenTimeAPIDemo3
+# Automated builds and TestFlight deployment
+
+default_platform(:ios)
+
+# Configuration
+PROJECT_NAME = "ScreenTimeAPIDemo3"
+XCODEPROJ = "ScreenTimeAPIDemo3.xcodeproj"
+SCHEME = "ScreenTimeAPIDemo3"
+BUNDLE_ID = "com.luminote.screentime"
+TEAM_ID = "9DF257V497"
+
+# Extension bundle IDs
+EXTENSIONS = {
+  "ShieldAction" => "com.luminote.screentime.ShieldAction",
+  "ShieldConfig" => "com.luminote.screentime.ShieldConfig",
+  "DeviceActivityReportExtension" => "com.luminote.screentime.DeviceActivityReport",
+  "DeviceActivityMonitorExtension" => "com.luminote.screentime.DeviceActivityMonitor"
+}
+
+platform :ios do
+  before_all do
+    setup_ci if ENV['CI']
+  end
+
+  desc "Run tests"
+  lane :test do
+    run_tests(
+      project: XCODEPROJ,
+      scheme: SCHEME,
+      device: "iPhone 15 Pro",
+      skip_build: false,
+      output_types: "junit",
+      fail_build: true
+    )
+  end
+
+  desc "Build the app for release"
+  lane :build do |options|
+    build_number = options[:build_number] || generate_build_number
+
+    UI.message("Building with build number: #{build_number}")
+
+    # Update build number for all targets
+    increment_build_number(
+      build_number: build_number,
+      xcodeproj: XCODEPROJ
+    )
+
+    # Build the app
+    build_app(
+      project: XCODEPROJ,
+      scheme: SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: provisioning_profiles
+      },
+      output_directory: "./build",
+      output_name: "#{PROJECT_NAME}.ipa",
+      clean: true,
+      include_bitcode: false
+    )
+  end
+
+  desc "Build and upload to TestFlight"
+  lane :beta do |options|
+    build_number = options[:build_number] || generate_build_number
+
+    UI.message("Starting TestFlight build with number: #{build_number}")
+
+    # Build the app
+    build(build_number: build_number)
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      changelog: generate_changelog
+    )
+
+    UI.success("Successfully uploaded build #{build_number} to TestFlight!")
+  end
+
+  desc "Build and upload to TestFlight using App Store Connect API Key"
+  lane :beta_with_api_key do |options|
+    build_number = options[:build_number] || generate_build_number
+
+    # Setup App Store Connect API Key
+    api_key = app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_API_KEY_ID"],
+      issuer_id: ENV["APP_STORE_CONNECT_API_ISSUER_ID"],
+      key_content: ENV["APP_STORE_CONNECT_API_KEY_CONTENT"],
+      is_key_content_base64: true,
+      in_house: false
+    )
+
+    UI.message("Starting TestFlight build with number: #{build_number}")
+
+    # Update build number for all targets
+    increment_build_number(
+      build_number: build_number,
+      xcodeproj: XCODEPROJ
+    )
+
+    # Build the app
+    build_app(
+      project: XCODEPROJ,
+      scheme: SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: provisioning_profiles
+      },
+      output_directory: "./build",
+      output_name: "#{PROJECT_NAME}.ipa",
+      clean: true,
+      include_bitcode: false
+    )
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      changelog: generate_changelog
+    )
+
+    UI.success("Successfully uploaded build #{build_number} to TestFlight!")
+  end
+
+  desc "Upload to App Store for review"
+  lane :release do |options|
+    build_number = options[:build_number] || generate_build_number
+
+    # Build the app
+    build(build_number: build_number)
+
+    # Upload to App Store Connect
+    upload_to_app_store(
+      skip_screenshots: true,
+      skip_metadata: true,
+      submit_for_review: false,
+      automatic_release: false
+    )
+  end
+
+  # Helper Methods
+
+  private_lane :generate_build_number do
+    # Generate a timestamp-based build number
+    Time.now.strftime("%Y%m%d%H%M")
+  end
+
+  private_lane :generate_changelog do
+    # Get recent commits for changelog
+    changelog = changelog_from_git_commits(
+      commits_count: 10,
+      pretty: "- %s",
+      merge_commit_filtering: "exclude_merges"
+    ) rescue "No changelog available"
+
+    # Add PR/branch info if available
+    if ENV['GITHUB_HEAD_REF']
+      "Branch: #{ENV['GITHUB_HEAD_REF']}\n\n#{changelog}"
+    elsif ENV['GITHUB_REF_NAME']
+      "Branch: #{ENV['GITHUB_REF_NAME']}\n\n#{changelog}"
+    else
+      changelog
+    end
+  end
+
+  private_lane :provisioning_profiles do
+    profiles = {
+      BUNDLE_ID => "match AppStore #{BUNDLE_ID}"
+    }
+
+    EXTENSIONS.each do |name, bundle_id|
+      profiles[bundle_id] = "match AppStore #{bundle_id}"
+    end
+
+    profiles
+  end
+
+  # Error handling
+  error do |lane, exception|
+    UI.error("Failed in lane #{lane}: #{exception.message}")
+  end
+end
