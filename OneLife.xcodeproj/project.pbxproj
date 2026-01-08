@@ -12,11 +12,6 @@
 		284E221B2A85DD6700005C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221A2A85DD6700005C08 /* Assets.xcassets */; };
 		284E221E2A85DD6700005C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221D2A85DD6700005C08 /* Preview Assets.xcassets */; };
 		284E22252A85DD7A00005C08 /* FamilyControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22242A85DD7A00005C08 /* FamilyControlModel.swift */; };
-		DA00000001000000 /* DeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000002000000 /* DeviceActivityReportExtension.swift */; };
-		DA00000003000000 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000004000000 /* TotalActivityReport.swift */; };
-		DA00000005000000 /* TopAppsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000006000000 /* TopAppsReport.swift */; };
-		DA00000007000000 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA00000008000000 /* DeviceActivity.framework */; };
-		DA00000009000000 /* DeviceActivityReport.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DA0000000A000000 /* DeviceActivityReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		28F813A82A9352C4007F50BA /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F813A72A9352C4007F50BA /* ManagedSettings.framework */; };
 		28F813AB2A9352C4007F50BA /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F813AA2A9352C4007F50BA /* ShieldActionExtension.swift */; };
 		28F813B02A9352C4007F50BA /* ShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28F813A52A9352C4007F50BA /* ShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -38,6 +33,11 @@
 		CL00000015000000 /* ScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CL00000016000000 /* ScheduleTab.swift */; };
 		CL00000017000000 /* ScheduleEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CL00000018000000 /* ScheduleEditorSheet.swift */; };
 		CL00000019000000 /* ScheduleStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CL0000001A000000 /* ScheduleStatusView.swift */; };
+		DA00000001000000 /* DeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000002000000 /* DeviceActivityReportExtension.swift */; };
+		DA00000003000000 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000004000000 /* TotalActivityReport.swift */; };
+		DA00000005000000 /* TopAppsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00000006000000 /* TopAppsReport.swift */; };
+		DA00000007000000 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA00000008000000 /* DeviceActivity.framework */; };
+		DA00000009000000 /* DeviceActivityReportExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DA0000000A000000 /* DeviceActivityReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 			files = (
 				28F813B02A9352C4007F50BA /* ShieldAction.appex in Embed Foundation Extensions */,
 				28F813C42A9353A8007F50BA /* ShieldConfig.appex in Embed Foundation Extensions */,
-				DA00000009000000 /* DeviceActivityReport.appex in Embed Foundation Extensions */,
+				DA00000009000000 /* DeviceActivityReportExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +116,7 @@
 		DA00000004000000 /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
 		DA00000006000000 /* TopAppsReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppsReport.swift; sourceTree = "<group>"; };
 		DA00000008000000 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
-		DA0000000A000000 /* DeviceActivityReport.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityReport.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0000000A000000 /* DeviceActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0000000D000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA0000000E000000 /* DeviceActivityReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityReport.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +175,7 @@
 				284E22132A85DD6500005C08 /* OneLife.app */,
 				28F813A52A9352C4007F50BA /* ShieldAction.appex */,
 				28F813B92A9353A8007F50BA /* ShieldConfig.appex */,
-				DA0000000A000000 /* DeviceActivityReport.appex */,
+				DA0000000A000000 /* DeviceActivityReportExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,18 +236,6 @@
 			path = ShieldConfig;
 			sourceTree = "<group>";
 		};
-		DA0000000F000000 /* DeviceActivityReportExtension */ = {
-			isa = PBXGroup;
-			children = (
-				DA00000002000000 /* DeviceActivityReportExtension.swift */,
-				DA00000004000000 /* TotalActivityReport.swift */,
-				DA00000006000000 /* TopAppsReport.swift */,
-				DA0000000D000000 /* Info.plist */,
-				DA0000000E000000 /* DeviceActivityReport.entitlements */,
-			);
-			path = DeviceActivityReportExtension;
-			sourceTree = "<group>";
-		};
 		CL00000020000000 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +275,18 @@
 				CL0000001A000000 /* ScheduleStatusView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA0000000F000000 /* DeviceActivityReportExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DA00000002000000 /* DeviceActivityReportExtension.swift */,
+				DA00000004000000 /* TotalActivityReport.swift */,
+				DA00000006000000 /* TopAppsReport.swift */,
+				DA0000000D000000 /* Info.plist */,
+				DA0000000E000000 /* DeviceActivityReport.entitlements */,
+			);
+			path = DeviceActivityReportExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +361,7 @@
 			);
 			name = DeviceActivityReportExtension;
 			productName = DeviceActivityReportExtension;
-			productReference = DA0000000A000000 /* DeviceActivityReport.appex */;
+			productReference = DA0000000A000000 /* DeviceActivityReportExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -652,8 +652,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -684,8 +688,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,7 +717,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldAction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -735,7 +743,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldAction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -761,7 +769,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.ShieldConfig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -787,7 +795,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.ShieldConfig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -813,7 +821,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.DeviceActivityReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.DeviceActivityReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -839,7 +847,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.DeviceActivityReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vascodegraaff.onelife.DeviceActivityReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
