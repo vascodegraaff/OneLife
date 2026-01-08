@@ -1,0 +1,66 @@
+# Xcode
+*.xcuserstate
+*.xcscmblueprint
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode User data
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Build directories
+build/
+Build/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+!Podfile.lock
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/README.md
+
+# Ruby
+.bundle/
+vendor/bundle
+Gemfile.lock
+
+# Code signing
+*.mobileprovision
+*.p12
+*.cer
+
+# Secrets (never commit these!)
+*.env
+.env.*
+secrets/
+AuthKey_*.p8
+
+# IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporary files
+*.tmp
+*.temp
