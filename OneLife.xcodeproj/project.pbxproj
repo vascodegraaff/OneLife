@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		284E22172A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22162A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift */; };
+		284E22172A85DD6500005C08 /* OneLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22162A85DD6500005C08 /* OneLifeApp.swift */; };
 		284E22192A85DD6500005C08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E22182A85DD6500005C08 /* ContentView.swift */; };
 		284E221B2A85DD6700005C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221A2A85DD6700005C08 /* Assets.xcassets */; };
 		284E221E2A85DD6700005C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E221D2A85DD6700005C08 /* Preview Assets.xcassets */; };
@@ -81,13 +81,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		284E22132A85DD6500005C08 /* ScreenTimeAPIDemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenTimeAPIDemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		284E22162A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeAPIDemo3App.swift; sourceTree = "<group>"; };
+		284E22132A85DD6500005C08 /* OneLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		284E22162A85DD6500005C08 /* OneLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLifeApp.swift; sourceTree = "<group>"; };
 		284E22182A85DD6500005C08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		284E221A2A85DD6700005C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284E221D2A85DD6700005C08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		284E22242A85DD7A00005C08 /* FamilyControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyControlModel.swift; sourceTree = "<group>"; };
-		284E22262A85EA5A00005C08 /* ScreenTimeAPIDemo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeAPIDemo3.entitlements; sourceTree = "<group>"; };
+		284E22262A85EA5A00005C08 /* OneLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneLife.entitlements; sourceTree = "<group>"; };
 		28F813A52A9352C4007F50BA /* ShieldAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F813A72A9352C4007F50BA /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
 		28F813AA2A9352C4007F50BA /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		284E220A2A85DD6500005C08 = {
 			isa = PBXGroup;
 			children = (
-				284E22152A85DD6500005C08 /* ScreenTimeAPIDemo3 */,
+				284E22152A85DD6500005C08 /* OneLife */,
 				28F813A92A9352C4007F50BA /* ShieldAction */,
 				28F813BD2A9353A8007F50BA /* ShieldConfig */,
 				DA0000000F000000 /* DeviceActivityReportExtension */,
@@ -172,7 +172,7 @@
 		284E22142A85DD6500005C08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				284E22132A85DD6500005C08 /* ScreenTimeAPIDemo3.app */,
+				284E22132A85DD6500005C08 /* OneLife.app */,
 				28F813A52A9352C4007F50BA /* ShieldAction.appex */,
 				28F813B92A9353A8007F50BA /* ShieldConfig.appex */,
 				DA0000000A000000 /* DeviceActivityReport.appex */,
@@ -180,11 +180,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		284E22152A85DD6500005C08 /* ScreenTimeAPIDemo3 */ = {
+		284E22152A85DD6500005C08 /* OneLife */ = {
 			isa = PBXGroup;
 			children = (
-				284E22262A85EA5A00005C08 /* ScreenTimeAPIDemo3.entitlements */,
-				284E22162A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift */,
+				284E22262A85EA5A00005C08 /* OneLife.entitlements */,
+				284E22162A85DD6500005C08 /* OneLifeApp.swift */,
 				284E22182A85DD6500005C08 /* ContentView.swift */,
 				284E22242A85DD7A00005C08 /* FamilyControlModel.swift */,
 				CL00000020000000 /* Shared */,
@@ -194,7 +194,7 @@
 				284E221A2A85DD6700005C08 /* Assets.xcassets */,
 				284E221C2A85DD6700005C08 /* Preview Content */,
 			);
-			path = ScreenTimeAPIDemo3;
+			path = OneLife;
 			sourceTree = "<group>";
 		};
 		284E221C2A85DD6700005C08 /* Preview Content */ = {
@@ -292,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		284E22122A85DD6500005C08 /* ScreenTimeAPIDemo3 */ = {
+		284E22122A85DD6500005C08 /* OneLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 284E22212A85DD6700005C08 /* Build configuration list for PBXNativeTarget "ScreenTimeAPIDemo3" */;
+			buildConfigurationList = 284E22212A85DD6700005C08 /* Build configuration list for PBXNativeTarget "OneLife" */;
 			buildPhases = (
 				284E220F2A85DD6500005C08 /* Sources */,
 				284E22102A85DD6500005C08 /* Frameworks */,
@@ -308,9 +308,9 @@
 				28F813C32A9353A8007F50BA /* PBXTargetDependency */,
 				DA00000010000000 /* PBXTargetDependency */,
 			);
-			name = ScreenTimeAPIDemo3;
-			productName = ScreenTimeAPIDemo3;
-			productReference = 284E22132A85DD6500005C08 /* ScreenTimeAPIDemo3.app */;
+			name = OneLife;
+			productName = OneLife;
+			productReference = 284E22132A85DD6500005C08 /* OneLife.app */;
 			productType = "com.apple.product-type.application";
 		};
 		28F813A42A9352C4007F50BA /* ShieldAction */ = {
@@ -388,7 +388,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 284E220E2A85DD6500005C08 /* Build configuration list for PBXProject "ScreenTimeAPIDemo3" */;
+			buildConfigurationList = 284E220E2A85DD6500005C08 /* Build configuration list for PBXProject "OneLife" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -401,7 +401,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				284E22122A85DD6500005C08 /* ScreenTimeAPIDemo3 */,
+				284E22122A85DD6500005C08 /* OneLife */,
 				28F813A42A9352C4007F50BA /* ShieldAction */,
 				28F813B82A9353A8007F50BA /* ShieldConfig */,
 				DA0000000C000000 /* DeviceActivityReportExtension */,
@@ -450,7 +450,7 @@
 			files = (
 				284E22192A85DD6500005C08 /* ContentView.swift in Sources */,
 				284E22252A85DD7A00005C08 /* FamilyControlModel.swift in Sources */,
-				284E22172A85DD6500005C08 /* ScreenTimeAPIDemo3App.swift in Sources */,
+				284E22172A85DD6500005C08 /* OneLifeApp.swift in Sources */,
 				CL00000001000000 /* AppGroupManager.swift in Sources */,
 				CL00000003000000 /* AppIntention.swift in Sources */,
 				CL00000005000000 /* IntentionsManager.swift in Sources */,
@@ -634,10 +634,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ScreenTimeAPIDemo3/ScreenTimeAPIDemo3.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OneLife/OneLife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ScreenTimeAPIDemo3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OneLife/Preview Content\"";
 				DEVELOPMENT_TEAM = 9DF257V497;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -652,7 +652,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -666,10 +666,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ScreenTimeAPIDemo3/ScreenTimeAPIDemo3.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OneLife/OneLife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ScreenTimeAPIDemo3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OneLife/Preview Content\"";
 				DEVELOPMENT_TEAM = 9DF257V497;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -684,7 +684,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -709,7 +709,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.ShieldAction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -735,7 +735,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.ShieldAction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -761,7 +761,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.ShieldConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldConfig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -787,7 +787,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.ShieldConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.ShieldConfig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -813,7 +813,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.DeviceActivityReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.DeviceActivityReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -839,7 +839,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luminote.screentime.DeviceActivityReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onelife.app.DeviceActivityReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -851,7 +851,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		284E220E2A85DD6500005C08 /* Build configuration list for PBXProject "ScreenTimeAPIDemo3" */ = {
+		284E220E2A85DD6500005C08 /* Build configuration list for PBXProject "OneLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				284E221F2A85DD6700005C08 /* Debug */,
@@ -860,7 +860,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		284E22212A85DD6700005C08 /* Build configuration list for PBXNativeTarget "ScreenTimeAPIDemo3" */ = {
+		284E22212A85DD6700005C08 /* Build configuration list for PBXNativeTarget "OneLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				284E22222A85DD6700005C08 /* Debug */,

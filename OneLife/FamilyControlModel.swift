@@ -1,6 +1,6 @@
 //
 //  FamilyControlModel.swift
-//  ScreenTimeAPIDemo3
+//  OneLife
 //
 //  Created by Kei Fujikawa on 2023/08/11.
 //

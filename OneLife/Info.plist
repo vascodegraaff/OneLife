@@ -7,10 +7,10 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>screentimedemo</string>
+				<string>onelife</string>
 			</array>
 			<key>CFBundleURLName</key>
-			<string>com.luminote.screentime</string>
+			<string>com.onelife.app</string>
 		</dict>
 	</array>
 </dict>
