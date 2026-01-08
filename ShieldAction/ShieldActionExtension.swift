@@ -10,14 +10,14 @@ import ManagedSettings
 import os.log
 
 // Darwin notification name for cross-process communication
-private let kIntentionsDidChangeNotification = "com.luminote.screentime.intentionsDidChange" as CFString
+private let kIntentionsDidChangeNotification = "com.onelife.app.intentionsDidChange" as CFString
 
 // Logger for debugging
-private let logger = Logger(subsystem: "com.luminote.screentime.shieldaction", category: "ShieldAction")
+private let logger = Logger(subsystem: "com.onelife.app.shieldaction", category: "ShieldAction")
 
 class ShieldActionExtension: ShieldActionDelegate {
 
-    private let suiteName = "group.com.luminote.screentime"
+    private let suiteName = "group.com.onelife.app"
     private let store = ManagedSettingsStore()
 
     /// Post notification to main app that intentions changed

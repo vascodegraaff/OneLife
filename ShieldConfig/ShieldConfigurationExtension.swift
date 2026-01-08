@@ -11,7 +11,7 @@ import UIKit
 
 class ShieldConfigurationExtension: ShieldConfigurationDataSource {
 
-    private let suiteName = "group.com.luminote.screentime"
+    private let suiteName = "group.com.onelife.app"
 
     override func configuration(shielding application: Application) -> ShieldConfiguration {
         let appName = application.localizedDisplayName ?? "this app"

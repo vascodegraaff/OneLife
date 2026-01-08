@@ -13,7 +13,7 @@ import FamilyControls
 /// Monitors device activity and re-applies shields when sessions expire
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
 
-    private let suiteName = "group.com.luminote.screentime"
+    private let suiteName = "group.com.onelife.app"
     private let store = ManagedSettingsStore()
 
     override func intervalDidStart(for activity: DeviceActivityName) {
@@ -154,7 +154,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     // MARK: - Darwin Notifications
 
     private func postIntentionsDidChangeNotification() {
-        let notificationName = "com.luminote.screentime.intentionsDidChange" as CFString
+        let notificationName = "com.onelife.app.intentionsDidChange" as CFString
         CFNotificationCenterPostNotification(
             CFNotificationCenterGetDarwinNotifyCenter(),
             CFNotificationName(notificationName),

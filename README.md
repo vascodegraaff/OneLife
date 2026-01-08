@@ -1,4 +1,4 @@
-# ScreenTimeAPIDemo
+# OneLife
 
 ### Inspired by
 https://github.com/YazanHalawa/Explore-iOS-15-Screentime-API/tree/main/TestScreentimeAPI

@@ -1,6 +1,6 @@
 //
-//  ScreenTimeAPIDemo3App.swift
-//  ScreenTimeAPIDemo3
+//  OneLifeApp.swift
+//  OneLife
 //
 //  Created by Kei Fujikawa on 2023/08/11.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ScreenTimeAPIDemo3App: App {
+struct OneLifeApp: App {
     @State private var openedFromShield = false
 
     var body: some Scene {
@@ -21,7 +21,7 @@ struct ScreenTimeAPIDemo3App: App {
     }
 
     private func handleIncomingURL(_ url: URL) {
-        guard url.scheme == "screentimedemo" else { return }
+        guard url.scheme == "onelife" else { return }
 
         switch url.host {
         case "open":

@@ -4,13 +4,13 @@ import ManagedSettings
 import Combine
 
 // Darwin notification name for cross-process communication
-let kIntentionsDidChangeNotification = "com.luminote.screentime.intentionsDidChange" as CFString
+let kIntentionsDidChangeNotification = "com.onelife.app.intentionsDidChange" as CFString
 
 /// Manages shared data between the main app and extensions via App Groups
 final class AppGroupManager: ObservableObject {
     static let shared = AppGroupManager()
 
-    private let suiteName = "group.com.luminote.screentime"
+    private let suiteName = "group.com.onelife.app"
     private let userDefaults: UserDefaults?
 
     // In-memory cache of the selection for token lookup

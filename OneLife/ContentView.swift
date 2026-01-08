@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  ScreenTimeAPIDemo3
+//  OneLife
 //
 //  Created by Kei Fujikawa on 2023/08/11.
 //
@@ -444,7 +444,7 @@ struct DebugLogsView: View {
         intentions = AppGroupManager.shared.loadIntentions()
 
         // Load allowed until info
-        let userDefaults = UserDefaults(suiteName: "group.com.luminote.screentime")
+        let userDefaults = UserDefaults(suiteName: "group.com.onelife.app")
         if let data = userDefaults?.data(forKey: "allowedUntil"),
            let allowed = try? JSONDecoder().decode([String: Date].self, from: data) {
             let formatter = DateFormatter()

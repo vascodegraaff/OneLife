@@ -20,7 +20,7 @@ final class ScheduleManager: ObservableObject {
 
     private let schedulesKey = "blockSchedules"
     private let breakEndTimeKey = "scheduleBreakEndTime"
-    private let suiteName = "group.com.luminote.screentime"
+    private let suiteName = "group.com.onelife.app"
 
     private var breakCheckTimer: Timer?
 
